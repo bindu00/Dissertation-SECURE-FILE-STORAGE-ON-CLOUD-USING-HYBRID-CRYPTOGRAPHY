@@ -1,0 +1,42 @@
+{% include 'ahead.html'%}
+	<center><h1> View User Access Request  Details</h1></center>
+<body>
+
+
+<div class="container text-dark">
+ <table class="table" border="1" style="margin-left:100px;">
+    <thead class="thead-dark">
+      <tr>
+        <th> Id</th>
+              <th>Request By</th>
+			<th>Datee </th>
+          <th>Status </th>
+          <th>Accept</th>
+
+
+        </thead>
+</div>
+{% for user in reqdetails %}
+
+	<tbody>
+		<tr>
+		   <td>{{user[0]}}</td>
+		   <td>{{user[2]}}</td>
+			<td>{{user[3]}}</td>
+            <td>{{user[4]}}</td>
+             {%if user[4] == 'pending'%}
+
+            <td><a href="/verifyaccessrequest?Id={{user[0]}}"><button class="btn btn-primary">Accept</button></a> </td>
+            {%else%}
+                <td>Request Accepted</td>
+            {%endif%}
+
+
+        </tr>
+	</tbody>
+
+  {% endfor %}
+
+
+</table>
+</center>

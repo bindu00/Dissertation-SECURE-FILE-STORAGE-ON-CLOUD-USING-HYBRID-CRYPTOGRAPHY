@@ -1,0 +1,51 @@
+{% include "ohead.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+   <div class="col-md-4" ></div>
+    <div class="col-md-4" >
+    <div class="container">
+        {%for roww in fdel%}
+<div class="card">
+    <h2>FrageMent1</h2>
+      <div class="card-body"> {{roww[15]}}</div>
+</div>
+        <div class="card">
+<h2>FrageMent2</h2>
+            <div class="card-body"> {{roww[16]}}</div></div>
+        <div class="card">
+<h2>FrageMent3</h2>
+            <div class="card-body"> {{roww[17]}}</div></div>
+        <div class="card">
+<h2>FrageMent4</h2>
+            <div class="card-body"> {{roww[18]}}</div></div>
+        <div class="card">
+<h2>FrageMent5</h2>
+            <div class="card-body"> {{roww[19]}}</div></div>
+        <div class="card">
+<h2>FrageMent6</h2>
+            <div class="card-body"> {{roww[20]}}</div></div>
+        <div class="card">
+<h2>FrageMent7</h2>
+            <div class="card-body"> {{roww[21]}}</div></div>
+
+</div>
+    </div>
+        {%endfor%}
+          <div><button class="btn btn-success"><a href="/upload3">Upload</a></button></div>
+
+    </div>
+
+         <div class="col-md-4" ></div>
+  </div>
+</div>
+
+</body>
+</html>

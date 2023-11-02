@@ -1,0 +1,42 @@
+{% include 'ahead.html'%}
+	<center><h1> Uploded File Details</h1></center>
+<body>
+
+
+<div class="container text-dark">
+ <table class="table" border="1" style="margin-left:100px;">
+    <thead class="thead-dark">
+      <tr>
+        <th>File Id</th>
+              <th>File Name</th>
+            <th>Descrption</th>
+			<th>Datee </th>
+    <th>Owner Name </th>
+
+        </thead>
+</div>
+{% for user in userDetails %}
+
+	<tbody>
+		<tr>
+		   <td>{{user[0]}}</td>
+		   <td>{{user[1]}}</td>
+			<td>{{user[4]}}</td>
+			<td>{{user[22]}}</td>
+            	<td>{{user[2]}}</td>
+
+
+
+
+
+
+
+
+		</tr>
+	</tbody>
+
+  {% endfor %}
+
+
+</table>
+</center>

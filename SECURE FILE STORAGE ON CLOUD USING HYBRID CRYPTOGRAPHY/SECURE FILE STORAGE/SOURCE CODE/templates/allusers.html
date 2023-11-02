@@ -1,0 +1,56 @@
+{% include 'ahead.html'%}
+<br>
+	<center><h1>View User Details</h1></center>
+<body>
+
+
+<div class="container text-dark">
+ <table class="table" border="1" style="margin-left:100px;">
+    <thead class="thead-dark">
+      <tr>
+          <th>Image</th>
+        <th>User Id</th>
+              <th> Name</th>
+<th>User name</th>
+			<th>Email </th>
+			<th>Phone </th>
+
+          <th>Status</th>
+          <th>Action</th>
+        </thead>
+</div>
+{% for user in userDetails %}
+
+	<tbody>
+		<tr>
+            <td><img height="50" src=" {{url_for('send_image', filename=user[6])}}" ></td>
+
+		   <td>{{user[0]}}</td>
+		   <td>{{user[1]}}</td>
+			<td>{{user[2]}}</td>
+			<td>{{user[3]}}</td>
+<td>{{user[5]}}</td>
+            <td>{{user[7]}}</td>
+            {%if user[7] == 'unauthorized'%}
+
+                <td><a href="/activateuser?Id={{user[0]}}"><button class="btn btn-primary">Activate</button></a> </td>
+            {%else%}
+                <td><a href="/deactivateuser?Id={{user[0]}}"><button class="btn btn-danger">DeActivate</button></a>
+            {%endif%}
+
+
+
+
+
+
+
+
+
+		</tr>
+	</tbody>
+
+  {% endfor %}
+
+
+</table>
+</center>
